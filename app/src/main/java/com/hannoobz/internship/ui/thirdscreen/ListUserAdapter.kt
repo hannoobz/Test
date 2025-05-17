@@ -39,6 +39,11 @@ class ListUserAdapter(private val context: Context,private val listUser: ArrayLi
             .into(holder.imgPhoto)
     }
 
+    fun updateList(newList: List<User>) {
+        listUser.clear()
+        listUser.addAll(newList)
+        notifyDataSetChanged()
+    }
 
     fun setOnClickListener(listener: OnClickListener?) {
         this.onClickListener = listener

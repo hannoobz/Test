@@ -23,7 +23,7 @@
         android:layout_width="116dp"
         android:layout_height="116dp"
         android:id="@+id/imageView"
-        android:contentDescription="Image View Description"
+        android:contentDescription="@string/image_view_description"
         android:layout_marginTop="142dp"
         android:src="@drawable/ic_photo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,11 +56,12 @@
             android:id="@+id/nameText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
+            android:hint="@string/name"
             android:textColorHint="@color/gray"
             android:textColor="@color/black"
             android:ellipsize="end"
             android:maxLines="1"
+            android:singleLine="true"
             tools:ignore="KeyboardInaccessibleWidget" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -88,11 +89,12 @@
             android:id="@+id/palindromeText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Palindrome"
+            android:hint="@string/palindrome"
             android:textColorHint="@color/gray"
             android:textColor="@color/black"
             android:ellipsize="end"
             android:maxLines="1"
+            android:singleLine="true"
             tools:ignore="KeyboardInaccessibleWidget" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -109,7 +111,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         android:backgroundTint="#2b637b"
-        android:text="CHECK"
+        android:text="@string/check"
         android:textColor="@color/white"
         app:layout_constraintWidth_max="320dp"
         />
@@ -125,7 +127,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         android:backgroundTint="#2b637b"
-        android:text="NEXT"
+        android:text="@string/next"
         android:textColor="@color/white"
         app:layout_constraintWidth_max="320dp"
     />
