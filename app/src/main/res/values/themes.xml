@@ -6,4 +6,15 @@
     </style>
 
     <style name="Theme.InternshipTest" parent="Base.Theme.InternshipTest" />
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="TextInputHintBold" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
 </resources>
