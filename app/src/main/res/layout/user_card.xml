@@ -18,8 +18,8 @@
 
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
         android:id="@+id/ivProfilePhoto"
         android:contentDescription="Image View Description"
         android:src="@drawable/ic_launcher_background"
@@ -54,6 +54,7 @@
                 android:id="@+id/tvUserCardEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 app:layout_constraintStart_toStartOf="@id/tvUserCardName"
                 app:layout_constraintTop_toBottomOf="@+id/tvUserCardName"
                 android:textColor="@color/gray"

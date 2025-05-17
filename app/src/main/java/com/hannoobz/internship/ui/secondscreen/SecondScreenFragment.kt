@@ -17,6 +17,7 @@ class SecondScreenFragment : Fragment() {
     private val binding get() = _binding!!
     private val viewModel: SecondScreenViewModel by viewModels()
     private val DEFAULT_USERNAME = "Default Username"
+    private val DEFAULT_SELECTED = "Selected Username"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,12 +38,11 @@ class SecondScreenFragment : Fragment() {
         val currentUsername = sharedPrefcurrentUsername.getString(getString(R.string.current_username),DEFAULT_USERNAME)
 
         val sharedPrefSelectedUser= requireActivity().getSharedPreferences(getString(R.string.selected_username), Context.MODE_PRIVATE)
-        val selectedUser = sharedPrefSelectedUser.getString(getString(R.string.selected_username),DEFAULT_USERNAME)
+        val selectedUser = sharedPrefSelectedUser.getString(getString(R.string.selected_username),DEFAULT_SELECTED)
 
         binding.secondScreenTopBar.topBarTitle.text = getString(R.string.second_screen)
         binding.tvUsername.text = if (currentUsername?.isNotBlank() == true) currentUsername else DEFAULT_USERNAME
-
-        binding.tvSelectedUsername.text = selectedUser
+        binding.tvSelectedUsername.text =  if (selectedUser?.isNotBlank() == true) selectedUser else DEFAULT_SELECTED
 
         binding.secondScreenTopBar.buttonBack.setOnClickListener {
             findNavController().navigate(R.id.action_secondScreenFragment_to_firstScreenFragment)
