@@ -1,5 +1,6 @@
 package com.hannoobz.internship.ui.firstscreen
 
+import android.content.Context
 import androidx.fragment.app.viewModels
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -31,16 +32,24 @@ class FirstScreenFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val sharedPref = requireActivity().getSharedPreferences(getString(R.string.current_username), Context.MODE_PRIVATE)
+        binding.nameText.setText(sharedPref.getString(getString(R.string.current_username),""))
+
         binding.palindromeText.addTextChangedListener {
             viewModel.palindromeInput.value = it.toString()
         }
 
         binding.nameText.addTextChangedListener {
             viewModel.nameInput.value = it.toString()
+            with(sharedPref.edit()){
+                putString(getString(R.string.current_username),it.toString())
+                apply()
+            }
         }
 
         binding.checkButton.setOnClickListener{
             viewModel.checkPalindromeShow(requireContext())
+
         }
 
         binding.nextButton.setOnClickListener{

@@ -28,7 +28,7 @@
         android:text="Title"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:textSize="28sp"
+        android:textSize="24sp"
         android:gravity="center"
         app:layout_constraintStart_toEndOf="@id/buttonBack"
         app:layout_constraintEnd_toEndOf="parent"

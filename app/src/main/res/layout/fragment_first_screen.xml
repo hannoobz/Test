@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#52a6a9"
+    android:background="@drawable/background"
     >
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -98,7 +98,7 @@
 
 
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/checkButton"
         android:layout_width="0dp"
         android:layout_height="48dp"
@@ -108,23 +108,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        android:background="#2b637b"
+        android:backgroundTint="#2b637b"
         android:text="CHECK"
         android:textColor="@color/white"
         app:layout_constraintWidth_max="320dp"
         />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/nextButton"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="15dp"
         android:layout_marginHorizontal="32dp"
         app:layout_constraintTop_toBottomOf="@id/checkButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        android:background="#2b637b"
+        android:backgroundTint="#2b637b"
         android:text="NEXT"
         android:textColor="@color/white"
         app:layout_constraintWidth_max="320dp"
