@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cvCardContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:background="@color/white"
+        >
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/ivProfilePhoto"
+        android:contentDescription="Image View Description"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:shapeAppearanceOverlay="@style/circleImageView"
+        />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTextSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/ivProfilePhoto"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/tvUserCardName"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"
+                android:text="Firstname Lastname"
+            />
+            <TextView
+                android:id="@+id/tvUserCardEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tvUserCardName"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserCardName"
+                android:textColor="@color/gray"
+                android:textSize="16sp"
+                android:text="EMAIL@EMAIL.COM"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/light_gray"
+                app:layout_constraintTop_toBottomOf="@id/clTextSection"
+                />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

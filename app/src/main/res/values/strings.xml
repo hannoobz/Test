@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Internship Test</string>
     <string name="second_screen">Second Screen</string>
+    <string name="third_screen">Third Screen</string>
     <string name="current_username">"current_username"</string>
+    <string name="selected_username">"selected_username"</string>
 </resources>

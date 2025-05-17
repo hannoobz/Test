@@ -12,9 +12,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        val sharedPref = getSharedPreferences(getString(R.string.current_username), Context.MODE_PRIVATE)
-        with(sharedPref.edit()){
+        val sharedPrefUsername = getSharedPreferences(getString(R.string.current_username), Context.MODE_PRIVATE)
+        with(sharedPrefUsername.edit()){
             putString(getString(R.string.current_username),"")
+            apply()
+        }
+        val sharedPrefSelectedUser= getSharedPreferences(getString(R.string.selected_username), Context.MODE_PRIVATE)
+        with(sharedPrefSelectedUser.edit()){
+            putString(getString(R.string.selected_username),"Selected Username")
             apply()
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
